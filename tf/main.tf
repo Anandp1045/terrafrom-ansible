@@ -61,3 +61,7 @@ resource "aws_instance" "my_instance" {
   availability_zone = "eu-north-1b"
 
 }
+
+output "aws_public_ip" {
+  value = aws_instance.my_instance.public_ip
+}
